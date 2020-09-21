@@ -1,31 +1,32 @@
 
+
 @font-face {
     font-family: 'HelveticaUltra';
     src: url('statics/Fonts/HelveticaUltraLt_0.ttf');
     font-weight: normal;
     font-style: normal;
-};
+}
 
 @font-face {
     font-family: 'ps';
     src: url('statics/Fonts/ps.ttf');
     font-weight: normal;
     font-style: normal;
-};
+}
 
 @font-face {
     font-family: 'Roboto-Light';
     src: url('statics/Fonts/Roboto-Light_0.ttf');
     font-weight: normal;
     font-style: normal;
-};
+}
 
 @font-face {
     font-family: 'Roboto-Regular';
     src: url('statics/Fonts/Roboto-Regular_0.ttf');
     font-weight: normal;
     font-style: normal;
-};
+}
 
 html {
 	scroll-behavior: smooth;
