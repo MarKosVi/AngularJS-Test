@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Prova de seleção</title>
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
     <script src="js/app.js"></script>
@@ -15,7 +15,7 @@
 <body>
     <section class="container-fluid entrada" >
         <div class="menu">
-            <nav class="navbar navbar-light navbar-inner role="navigation">
+            <nav class="navbar navbar-light navbar-inner" role="navigation">
                 <div class="col mobile tablet">
                     <div id="menuToggle">
                         <input type="checkbox" />
@@ -24,9 +24,9 @@
                         <span></span>
 
                         <ul id="menu">
-                          <a href="#lista"><li class="font-white">lista</li></a>
-                          <a href="#sobre"><li class="font-white">sobre mim</li></a>
-                          <a href="#cadastro"><li class="font-white">cadastro</li></a>
+                          <a href="#lista"><li class="font-white font-menu">lista</li></a>
+                          <a href="#sobre"><li class="font-white font-menu">sobre mim</li></a>
+                          <a href="#cadastro"><li class="font-white font-menu">cadastro</li></a>
                         </ul>
                       </div>
                 </div>
@@ -115,8 +115,8 @@
                         <tbody>
                             <tr class="border border-white" ng-repeat="item in itens" >
                                 <th class="text-center border-bottom-0 border-left-0 text-blue textNum border-info" scope="row">{{ item.id }}</th>
-                                <td class="text-center border-bottom-0 border-info">{{item.nome}}</td>
-                                <td class="text-center border-bottom-0 border-info">{{item.email}}</td>
+                                <td class="text-center border-bottom-0 border-info text-form">{{item.nome}}</td>
+                                <td class="text-center border-bottom-0 border-info text-form">{{item.email}}</td>
                                 <td class="text-center border-bottom-0 border-info">{{item.nascimento}}</td>
                                 <td class="text-center border-bottom-0 border-right-0 border-info">{{item.telefone}}</td>
                             </tr>                  

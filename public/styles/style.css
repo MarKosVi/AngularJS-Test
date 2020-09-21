@@ -1,20 +1,32 @@
 
 @font-face {
-    font-family: HelveticaUltra;
-    src: url(static/Fonts/HelveticaUltraLt_0.ttf);
+    font-family: 'HelveticaUltra';
+    src: url('statics/Fonts/HelveticaUltraLt_0.ttf');
+    font-weight: normal;
+    font-style: normal;
+};
 
-    font-family: ps;
-    src: url(static/Fonts/ps.ttf);
+@font-face {
+    font-family: 'ps';
+    src: url('statics/Fonts/ps.ttf');
+    font-weight: normal;
+    font-style: normal;
+};
 
-    font-family: Roboto-Light;
-    src: url(static/Fonts/Roboto-Light.ttf);
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('statics/Fonts/Roboto-Light_0.ttf');
+    font-weight: normal;
+    font-style: normal;
+};
 
-    font-family: Roboto-Regular;
-    src: url(static/Fonts/Roboto-Regular.ttf);
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('statics/Fonts/Roboto-Regular_0.ttf');
+    font-weight: normal;
+    font-style: normal;
+};
 
-    font-family: Roboto-Thin;
-    src: url(./static/Fonts/Roboto-Thin.ttf);
-}
 html {
 	scroll-behavior: smooth;
 }
@@ -29,19 +41,19 @@ html {
 
     .textTitulo1{
         color: #ffff;
-        font-size: 4rem;
+        font-size: 5.5rem;
         font-family: 'HelveticaUltra';
         position: relative;
-        top: 8rem;
-        right: 12rem;
+        top: 10rem;
+        right: 17rem;
     }
     
     .textTitulo2{
         color: #ffff;
         position: relative;
-        font-size: 1.8rem;
-        top: 6rem;
-        right: 12rem;
+        font-size: 2.4rem;
+        top: 8rem;
+        right: 17rem;
         font-family: 'HelveticaUltra';
     }
 
@@ -58,7 +70,7 @@ html {
     .btn-text{
         color: #29abe2;
         font-size: 36px;
-        font-family: 'HelveticaUltraLt';
+        font-family: 'HelveticaUltra';
     }
 
 }
@@ -76,7 +88,7 @@ html {
 
     .textTitulo1{
         color: #ffff;
-        font-size: 4rem;
+        font-size: 3.5rem;
         font-family: 'HelveticaUltra';
         position: relative;
         right: 10rem;
@@ -85,8 +97,8 @@ html {
     .textTitulo2{
         color: #ffff;
         position: relative;
-        font-size: 1.8rem;
-        top: -2.2rem;
+        font-size: 1.5rem;
+        top: -1.2rem;
         right: 10rem;
         font-family: 'HelveticaUltra';
     }
@@ -126,8 +138,7 @@ html {
         font-family: "HelveticaUltra";
         position: relative;
         top: 4.5vw;
-        z-index: -1;
-        
+        z-index: -1;  
     }
     
     .textTitulo2{
@@ -204,10 +215,18 @@ html {
     color: #ffff;
 }
 
+.font-menu{
+    font-family: 'Roboto-Regular';
+}
+
 .menu{
     position: relative;
     z-index: 10;
     height: 0rem;
+}
+
+.text-form{
+    font-family: 'Roboto-Regular';
 }
 
 .textNum{
@@ -229,7 +248,6 @@ html {
 .table{
     width: auto;
 }
-
 
 #menuToggle
 {
@@ -257,7 +275,6 @@ html {
   color: #012d51;
 }
 
-
 #menuToggle input
 {
   display: block;
@@ -269,15 +286,12 @@ html {
   
   cursor: pointer;
   
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  opacity: 0;
+  z-index: 2;
   
   -webkit-touch-callout: none;
 }
 
-/*
- * Just a quick hamburger
- */
 #menuToggle span
 {
   display: block;
@@ -308,10 +322,6 @@ html {
   transform-origin: 0% 100%;
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
 #menuToggle input:checked ~ span
 {
   opacity: 1;
@@ -319,27 +329,19 @@ html {
   background: #012d51;
 }
 
-/*
- * But let's hide the middle one.
- */
+
 #menuToggle input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
+
 #menuToggle input:checked ~ span:nth-last-child(2)
 {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
 #menu
 {
   position: absolute;
@@ -351,7 +353,6 @@ html {
   background: #29abe2;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
   
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
@@ -365,9 +366,6 @@ html {
   font-size: 22px;
 }
 
-/*
- * And let's slide it in from the left
- */
 #menuToggle input:checked ~ ul
 {
   transform: none;
