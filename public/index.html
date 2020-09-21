@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="container-fluid entrada" >
+        <div class="menu">
+            <nav class="navbar navbar-light navbar-inner role="navigation">
+                <div class="col mobile tablet">
+                    <div id="menuToggle">
+                        <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <ul id="menu">
+                          <a href="#lista"><li class="font-white">lista</li></a>
+                          <a href="#sobre"><li class="font-white">sobre mim</li></a>
+                          <a href="#cadastro"><li class="font-white">cadastro</li></a>
+                        </ul>
+                      </div>
+                </div>
+                <div class="col">
+                    <div class="text-right text-md-center ml-md-5" > 
+                        <a class="navbar-brand" href="#">
+                            <img src="static/icones/logo-in8-dev.svg" width="100" height="100" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col desktop">
+                    <div class="text-center mr-5 pr-5"> 
+                        <ul class="mr-5">
+                            <li class="list-inline-item"><a href="#cadastro" class="font-white">cadastro</a></li>
+                            <li class="list-inline-item text-white" >•</li>
+                            <li class="list-inline-item"><a href="#lista" class="font-white">lista</a></li>
+                            <li class="list-inline-item text-white">•</li>
+                            <li class="list-inline-item mr-5"><a href="#sobre" class="font-white">sobre mim</a></li>
+                        </ul>  
+                    </div>
+                </div>
+              </nav>
+              <p class="text-center textTitulo1">ESTÁGIO</p>
+              <p class="text-center textTitulo2">PROVA DE SELEÇÃO</p>
+        </div>
+        <div class="row desktop">
+            <img class=" imgFundo desktop tablet" src="./static/imagens/index-image.jpg" alt="">
+        </div>
+        <div class="row mobile">
+            <img class=" mobile" src="./static/imagens/index-image-mobile.jpg" alt="">
+        </div>
+
+    </section>
+    <div ng-app="myApp" ng-controller="ListaController">
+
+        <section id="cadastro" class="container-fluid form-box">
+            <div class="row">
+                <div class="centralizar">
+                    <h1 class="text-center text-white mt-5 pt-5 pb-4">CADASTRO</h1>
+                    <div class="m-5">
+                        <div class="form-center">
+                        <form class="w-100">
+                            <div class="d-block mb-2">
+                                <div><label class="text-white"  for="exampleInputPassword1">Nome</label></div>
+                                <div><input type="text" class="form-control-edit" ng-model="item.nome" id="nome" required></div>
+                            </div>
+                            <div class="d-block mb-1">
+                                <div><label class="text-white"  for="exampleInputPassword1">E-mail</label></div>
+                                <div><input type="email" class="form-control-edit" ng-model="item.email" id="email" required ></div>
+                            </div>
+                            <div class="d-block mb-1">
+                                <div><label class="text-white"  for="exampleInputPassword1">Nascimento</label></div>
+                                <div><input type="date" class="form-control-edit" ng-model="item.nascimento" id="nascimento" required></div>
+                            </div>
+                            <div class="d-block mb-1">
+                                <div><label class="text-white"  for="exampleInputPassword1">Telefone</label></div>
+                                <div><input type="tel" class="form-control-edit" ng-model="item.telefone" id="telefone" required></div>
+                            </div>
+                            <div class="row d-flex justify-content-center">
+                                <button type="reset" class="btn btn-cadastro ml-3 mr-3 mt-4" ng-click="adicionaItem()" onclick="location.href='#lista'" ng-href="#lista">
+                                    <p class="btn-text">CADASTRAR</p> 
+                                </button>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>  
+        <section id="lista" class="container-fluid">
+            <div class="row d-block m-2 m-md-5">
+                <div class="centralizar">
+                    <h1 class="text-center titulo-blue mt-5 pt-5 mb-5">LISTA DE CADASTRO</h1>
+                </div>
+                <div class="m-1 desktop tablet">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr class="border border-white">
+                                <th class="border border-info border-top-0 border-bottom-0 border-left-0 text-center" scope="col"></th>
+                                <th class="text-center text-blue border-top-0 border-bottom-0 border-info "  scope="col">NOME</th>
+                                <th class="text-center text-blue border-top-0 border-bottom-0 border-info " scope="col">E-MAIL</th>
+                                <th class="text-center text-blue border-top-0 border-bottom-0 border-info " scope="col">NASCIMENTO</th>
+                                <th class="text-center text-blue border-top-0 border-bottom-0 border-right-0 border-info " scope="col">TELEFONE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border border-white" ng-repeat="item in itens" >
+                                <th class="text-center border-bottom-0 border-left-0 text-blue textNum border-info" scope="row">{{ item.id }}</th>
+                                <td class="text-center border-bottom-0 border-info">{{item.nome}}</td>
+                                <td class="text-center border-bottom-0 border-info">{{item.email}}</td>
+                                <td class="text-center border-bottom-0 border-info">{{item.nascimento}}</td>
+                                <td class="text-center border-bottom-0 border-right-0 border-info">{{item.telefone}}</td>
+                            </tr>                  
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mobile">
+                    <div class="w-100">
+                        <div class="row ml-1 mr-1" >
+                            <button class="btn col ml-1 text-blue rounded-0 border border-dark" ng-repeat="item in itens" id='{{ item.id }}' onclick="selecionarTabela(this)">{{ item.id }}</button>
+                        </div>
+                    </div>
+                    <div ng-repeat="item in itens" id="lista">
+                        <div class="border border-info ml-2 mr-1 p-3" name='tabl' id='{{ item.id }}' >
+                            <div class="d-block pb-4">
+                                <div class="border-bottom m-1 border-info  "><label class="font-weight-bold"  for="">NOME</label> <span class="ml-4">{{ item.nome }}</span></div>
+                                <div class="border-bottom m-1 border-info "><label class="font-weight-bold"  for="">E-MAIL</label><span class="ml-4">{{ item.email }}</span></div>
+                                <div class="border-bottom m-1 border-info "><label class="font-weight-bold"  for="">NASC.</label><span class="ml-4">{{ item.nascimento }}</span></div>
+                                <div class="border-bottom m-1 border-info "><label class="font-weight-bold"  for="">TEL</label><span class="ml-5">{{ item.telefone }}</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+    </div>
+    <section id="sobre" class="container-fluid">
+        <div class="text-center footer-text">
+            <p>Marcos Vinicio Fonseca Barros</p>
+            <p>mfonsecabarros@gmail.com</p>
+            <p>(31) 9 9606-5006</p>
+            <p>Centro Universitário UniBH</p>
+        </div>
+        <div class="row">
+            <img class="w-100 desktop tablet imgFooter" src="./static/imagens/rodape-desktop.jpg" alt="">
+        </div>
+        <div class="row">
+            <img class="w-100 mobile" src="./static/imagens/rodape-mobile.jpg" alt="">
+        </div>
+       
+    </section>
+</body>
+</html>
+
+ 

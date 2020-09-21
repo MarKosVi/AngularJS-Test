@@ -9,7 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "gulp-svgmin": "^3.0.0"
+    "gulp-svgmin": "^3.0.0",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
     "express": "^4.17.1",

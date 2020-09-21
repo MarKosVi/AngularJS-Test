@@ -1,0 +1,14 @@
+
+@font-face {
+    font-family: HelveticaUltra;
+    src: url(./static/Fonts/HelveticaUltraLt_0.ttf);
+
+    font-family: ps;
+    src: url(./static/Fonts/ps.ttf);
+
+    font-family: Roboto-Light;
+    src: url(./static/Fonts/Roboto-Light_0.ttf);
+
+    font-family: Roboto-Regular;
+    src: url(./static/Fonts/Roboto-Regular_0.ttf);
+}
